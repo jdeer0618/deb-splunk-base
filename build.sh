@@ -4,8 +4,10 @@ if [ -z $CURRENT ]; then
 fi
 
 if [ -z $1 ]; then
-  1=6.6.1
+	docker_image_tag='6.6.1'
+else
+  docker_image_tag=$1
 fi
 
-docker build --no-cache=true -t iam6a64/splunk:$1 $CURRENT
+docker build --no-cache=true -t iam6a64/splunk:$docker_image_tag $CURRENT
 docker build -t splunk/splunk:latest $CURRENT
