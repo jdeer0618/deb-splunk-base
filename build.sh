@@ -1,6 +1,6 @@
 #https://docs.docker.com/engine/reference/commandline/build/
 if [ -z $CURRENT ]; then
-	CURRENT=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+  CURRENT=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 fi
 
 if [ -z $1 ]; then
@@ -10,4 +10,4 @@ else
 fi
 
 docker build --no-cache=true -t iam6a64/splunk:$docker_image_tag $CURRENT
-docker build -t splunk/splunk:latest $CURRENT
+docker build -t iam6a64/splunk:latest $CURRENT
