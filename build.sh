@@ -4,7 +4,7 @@ if [ -z $CURRENT ]; then
 fi
 
 if [ -z $1 ]; then
-	docker_image_tag='6.6.1'
+  docker_image_tag='6.6.1'
 else
   docker_image_tag=$1
 fi
